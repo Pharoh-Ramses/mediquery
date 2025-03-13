@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MediQuery: AI-Powered EHR Assistant
 
-## Getting Started
+![MediQuery Logo](https://placeholder.svg?height=100&width=300&text=MediQuery+Logo)
 
-First, run the development server:
+MediQuery is an innovative AI-powered assistant designed to revolutionize how healthcare professionals interact with Electronic Health Records (EHR). By leveraging advanced natural language processing, MediQuery allows medical staff to quickly retrieve patient information, streamline workflows, and spend more time on patient care.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Natural Language Queries**: Simply ask for the patient information you need in plain language.
+- **Instant Information Retrieval**: Access patient data in seconds without navigating complex EHR menus.
+- **Clinical Context Awareness**: Our AI understands medical terminology and relationships between health data points.
+- **Comprehensive EHR Integration**: Seamlessly connects with major EHR systems including Epic, Cerner, and Allscripts.
+- **Structured Data Summaries**: Get organized summaries of patient histories, lab results, medications, and treatment plans.
+- **Time-Saving Efficiency**: Reduce documentation time by up to 40%, allowing more meaningful patient interactions.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Frontend**: Next.js 15, React, Tailwind CSS
+- **Authentication**: Clerk
+- **AI/ML**: Claude Sonnet & IBM WX Flows
+- **Database**: Convex
 
-## Learn More
+## 📋 Prerequisites
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Node.js (v18 or later)
+- npm or bun
