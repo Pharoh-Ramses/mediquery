@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 interface NavigationContextType {
     isMobileNavOpen: boolean;
@@ -30,4 +30,12 @@ export function NavigationProvider({
         closeMobileNav }}>
         {children}
     </NavigationContext>;
+}
+
+export function useNavigation() {
+  const context = useContext(NavigationContext);
+  if (context === undefined) {
+    throw new Error("useNavigation must be used within a NavigationProvider");
+  }
+  return context;
 }

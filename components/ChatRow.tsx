@@ -1,9 +1,12 @@
-import { Doc, Id } from "@/convex/_generated/dataModel";
 import { NavigationContext } from "@/lib/NavigationProvider";
+import { Doc, Id } from "@/convex/_generated/dataModel";
 import { TrashIcon } from "@radix-ui/react-icons";
 import { useRouter } from "next/navigation";
 import { use } from "react";
 import { Button } from "./ui/button";
+import { useQuery } from "convex/react";
+import { api } from "@/convex/_generated/api";
+import TimeAgo from "react-timeago";
 
 function ChatRow({
   chat,
@@ -14,6 +17,10 @@ function ChatRow({
 }) {
   const router = useRouter();
   const { closeMobileNav } = use(NavigationContext);
+
+  const lastMessage = useQuery(api.messages.getLastMessage, {
+    chatId: chat._id,
+  });
 
   const handleClick = () => {
     router.push(`/dashboard/chat/${chat._id}`);
@@ -40,6 +47,11 @@ function ChatRow({
             <TrashIcon className="w-4 h-4 text-gray-400 hover:text-red-500 transition-colors duration-200" />
           </Button>
         </div>
+        {lastMessage && (
+          <p className="text-xs text-gray-400 mt-1.5 font-medium">
+            <TimeAgo date={lastMessage.createdAt} />
+          </p>
+        )}
       </div>
     </div>
   );
